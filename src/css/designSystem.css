@@ -20,6 +20,10 @@
   --spacing-st: 32px;
   --spacing-sm: 16px;
 
+  --transition-sd: 0.8s;
+  --transition-sm: 0.5s;
+  --transition-xs: 0.3s;
+
   --container-width: 1440px;
 
   --font: "Poppins", sans-serif;
@@ -93,9 +97,16 @@ a {
 }
 
 nav a {
-  font-size: var(--font-sd);
+  font-size: 15px;
   color: var(--gray);
   font-weight: bold;
+  font-family: var(--font);
+  transition: var(--transition-sm);
+}
+
+nav a:hover {
+  transition: var(--transition-sm);
+  color: var(--gray-dark);
 }
 
 button {
