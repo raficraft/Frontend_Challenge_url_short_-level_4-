@@ -8,6 +8,7 @@ export function LOGO({ ...props }) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Logo of shortly website</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

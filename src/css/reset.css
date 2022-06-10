@@ -1,3 +1,45 @@
+:root {
+  --gray-dark: #34313d;
+  --violet-dark: #3a3054;
+  --violet: #4b3f6b;
+  --gray: #9e9aa8;
+  --gray-light: #979797;
+  --light: white;
+  --green: #2bd0d0;
+
+  --font-xl: 5rem; /*80px*/
+  --font-lg: 2.5rem; /*40px*/
+  --font-md-lg: 1.375rem; /*22px*/
+  --font-md: 1.5rem; /*20px*/
+  --font-sd-lg: 1.125rem; /*18px*/
+  --font-sd: 15px; /*15px*/
+  --font-xs: 12px; /*12px*/
+
+  --spacing-xl: 165px;
+  --spacing-md: 64px;
+  --spacing-st: 32px;
+  --spacing-sm: 16px;
+
+  --spacing-xl--y: 120px;
+  --spacing-md--y: 72px;
+  --spacing-st--y: 48px;
+  --spacing-sm--y: 16px;
+
+  --transition-sd: 0.8s;
+  --transition-sm: 0.5s;
+  --transition-xs: 0.3s;
+
+  --container-width: 1440px;
+
+  --font: "Poppins", sans-serif;
+
+  @media screen and (max-width: 1024px) {
+  }
+  @media screen and (max-width: 600px) {
+    --container-width: 100%;
+  }
+}
+
 html,
 body,
 div,
@@ -104,6 +146,11 @@ body {
   line-height: 1;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: #eff1f7;
 }
 
 ol,
