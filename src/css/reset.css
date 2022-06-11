@@ -32,12 +32,6 @@
   --container-width: 1440px;
 
   --font: "Poppins", sans-serif;
-
-  @media screen and (max-width: 1024px) {
-  }
-  @media screen and (max-width: 600px) {
-    --container-width: 100%;
-  }
 }
 
 html,

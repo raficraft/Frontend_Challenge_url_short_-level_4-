@@ -15,7 +15,7 @@ export default function Demo({ title, content }: CardProps) {
 
   return (
       <div  className='demo'>
-          <h1>More than just shorter links [ H1 ]</h1>
+          <h1>More than just shorter links <br></br> [ H1 ]</h1>
           <h2>Advanced Statistics [ H2 ]</h2>
           <h4>Title H4 [ H4 ]</h4>
       <p className="text-md-lg"> [ TEXT-medium-large ]Commodo non nostrud veniam aliquip est sint sit labore. Non quis sit elit id eiusmod nisi laboris in veniam proident aliqua incididunt ipsum minim. Anim culpa minim do sunt eiusmod ea aliqua anim in exercitation. Eiusmod mollit enim ea aliquip. Reprehenderit pariatur velit deserunt nostrud minim nostrud.</p>
@@ -33,12 +33,13 @@ export default function Demo({ title, content }: CardProps) {
       <button className='btn--xs' data-active="true">Copied</button>
 
       <div style={{backgroundColor : "#3a3054", padding : "2rem 6rem"}}>
-      <input type="text"  placeholder='Shorten a link here...'/>
+      <input type="text"  placeholder='Shorten a link here...' className='search'/>
         
       </div>
 
 
       <nav>
+        <a href="">Navigation</a>
         <a href="">Features</a>
         <a href="">Pricing</a>
         <a href="">Ressources</a>

@@ -1,6 +1,15 @@
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+blockquote,
+li {
+  color: var(--gray-dark);
 }
+
 h1 {
   font-size: var(--font-xl);
   line-height: 90px;
@@ -110,7 +119,7 @@ button {
   width: 100%;
 }
 
-input {
+.search {
   border: none;
   padding: 14px 2rem;
   min-width: 80%;
@@ -121,7 +130,7 @@ input {
   font-size: var(--font-md);
 }
 
-input::placeholder {
+.search::placeholder {
   color: var(--gray-dark);
   font-weight: 500;
   font-size: var(--font-md);
@@ -140,7 +149,7 @@ input::placeholder {
   padding: 4rem 0;
 }
 .demo * {
-  margin: 1rem;
+  margin: 2rem;
 }
 
 /* layout */

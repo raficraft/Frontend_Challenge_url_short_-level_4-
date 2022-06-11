@@ -17,7 +17,7 @@ export default function Layout({children} : Props) {
         {children}
 
         </main>
-        <footer id="__Footer"><h1>Footer</h1></footer>
+        <footer id="__Footer" ><h1 className='text_light'>Footer</h1></footer>
     </section>
     
     </>
