@@ -13,10 +13,10 @@ export const S = {
     flex-direction: ${direction};
     flex-wrap: ${wrap};
     justify-content: ${justify};
-    align-content: ${align};
+    align-items: ${align};
   `,
 
-  size: (width : string, height = width) => css`
+  size: (width: string, height = width) => css`
     width: ${width};
     height: ${height};
   `,
@@ -42,7 +42,7 @@ export const S = {
     align-items: center;
   `,
 
-  round: (radius : string ) => css`
+  round: (radius: string) => css`
     border-radius: ${radius};
   `,
   responsiveContainer: (maxWidth = "100%") => css`
@@ -50,19 +50,19 @@ export const S = {
     width: 100%;
   `,
 
-  spacing: (value : number) => {
+  spacing: (value: number) => {
     const val = value * space;
     return val + "px";
   },
-  shadow: (color : string) => {
+  shadow: (color: string) => {
     return `box-shadow : 0 2px 4px ${color}`;
   },
 
-  centerAbsolute: (size : "string") => {
+  centerAbsolute: (size: "string") => {
     return `calc(50% - ${size} / 2)`;
   },
 
-  iframeResponsive: (height :string, width : string) => css`
+  iframeResponsive: (height: string, width: string) => css`
     overflow: hidden;
     padding-top: percentage(height / width);
     position: relative;
