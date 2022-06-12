@@ -35,9 +35,9 @@ position: relative;
       }
 
       .burger {
-        ${S.size("1.5rem", "19px")};
         content : " ";
         ${S.flex("column", "space-between", "center")};
+        ${S.size("1.5rem", "19px")};
         transition : var(--transition-sm);
         cursor : pointer;
 
@@ -56,11 +56,11 @@ position: relative;
             }
 
             span{
-                transition : var(--transition-sm);
-                content : " ";
-                width: 1.5rem;
-                height: 3px;
-                background-color : var(--gray-light) ;
+              content : " ";
+              width: 1.5rem;
+              height: 3px;
+              background-color : var(--gray-light) ;
+              transition : var(--transition-sm);
             }    
         }
       }
