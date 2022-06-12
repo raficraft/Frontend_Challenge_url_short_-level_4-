@@ -28,6 +28,13 @@ export const BurgerMenuContainer = styled.div`
       color: white;
       margin-bottom: 30px;
       line-height: 27px;
+      width: 100%;
+      text-align: center;
+      transition: var(--transition-sm);
+      &:hover {
+        transition: var(--transition-sm);
+        letter-spacing: 4px;
+      }
     }
 
     footer {

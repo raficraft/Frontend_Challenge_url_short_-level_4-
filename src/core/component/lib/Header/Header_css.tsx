@@ -39,6 +39,7 @@ position: relative;
         content : " ";
         ${S.flex("column", "space-between", "center")};
         transition : var(--transition-sm);
+        cursor : pointer;
 
         @media screen and (min-width : 960px){
             display : none;

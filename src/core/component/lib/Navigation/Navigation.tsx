@@ -18,7 +18,7 @@ export default function Navigation({
         to="/"
         className={`nav_${styles}`}
         onClick={(event) => {
-          cb(event);
+          cb && cb(event);
         }}
       >
         Features
@@ -27,7 +27,8 @@ export default function Navigation({
         to="/"
         className={`nav_${styles}`}
         onClick={(event) => {
-          cb(event);
+          event.preventDefault();
+          cb && cb(event);
         }}
       >
         Pricing
@@ -36,7 +37,7 @@ export default function Navigation({
         to="/"
         className={`nav_${styles}`}
         onClick={(event) => {
-          cb(event);
+          cb && cb(event);
         }}
       >
         Ressources

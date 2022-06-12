@@ -6,6 +6,7 @@
   --gray-light: #979797;
   --light: white;
   --green: #2bd0d0;
+  --green-hover: #9ae3e3;
 
   --font-xl: 5rem; /*80px*/
   --font-lg: 2.5rem; /*40px*/
@@ -126,6 +127,12 @@ a {
   border: none;
   color: var(--light);
   text-align: center;
+  transition: var(--transition-sm);
+}
+
+.btn:hover {
+  transition: var(--transition-sm);
+  background-color: var(--green-hover);
 }
 
 .btn_rounded-big {
@@ -175,14 +182,6 @@ a {
   font-weight: 500;
   font-size: var(--font-md);
   letter-spacing: 0.15px;
-}
-
-.search {
-}
-
-@media screen and (max-width: 1024px) {
-}
-@media screen and (max-width: 600px) {
 }
 
 .demo {

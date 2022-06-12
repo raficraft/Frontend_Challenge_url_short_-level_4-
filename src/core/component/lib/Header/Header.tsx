@@ -4,6 +4,7 @@ import { LOGO } from "../../SVG/LOGO";
 import { HeaderContainer } from "./Header_css";
 import Navigation from "../Navigation/Navigation";
 import BurgerMenu from "../BugerMenu/BurgerMenu";
+import e from "express";
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -12,18 +13,10 @@ type HeaderProps = {
 export default function Header({ children }: HeaderProps): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  function closeBurgerMenu() {
-    setIsOpen(false);
-  }
-
-  function toto(e: any) {
-    console.log("toto", e.stopPropagation(true));
-  }
-
   return (
     <>
       <HeaderContainer id="__Header">
-        <div className="header_content" onClick={toto}>
+        <div className="header_content">
           <header>
             <NavLink to="/">
               <LOGO className="logo"></LOGO>
@@ -54,7 +47,13 @@ export default function Header({ children }: HeaderProps): JSX.Element {
         </div>
       </HeaderContainer>
 
-      <BurgerMenu cb={closeBurgerMenu} isOpen={isOpen} />
+      <BurgerMenu
+        cb={(e: MouseEvent) => {
+          e.preventDefault();
+          setIsOpen(false);
+        }}
+        isOpen={isOpen}
+      />
     </>
   );
 }
