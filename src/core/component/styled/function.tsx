@@ -34,7 +34,7 @@ export const S = {
     right: 0;
   `,
 
-  flexCenter: (direction: string, wrap = "nowrap") => css`
+  flexCenter: (direction: string = "row", wrap = "nowrap") => css`
     display: flex;
     flex-direction: ${direction};
     flex-wrap: ${wrap};

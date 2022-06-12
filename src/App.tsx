@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Layout>
-        <Demo title="Démo" content="Lorem ipsum" />
+        {/* <Demo title="Démo" content="Lorem ipsum" /> */}
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

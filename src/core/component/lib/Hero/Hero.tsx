@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroContainer } from "./Hero_css";
 import { HeroSVG } from "../../SVG/HeroSVG";
+import HeroSVGTablet from "../../SVG/HeroSVGTablet";
 
 type NavigationProps = {
   children?: React.ReactNode;
@@ -13,6 +14,11 @@ export default function Hero({ children }: NavigationProps) {
         <div className="splash_text">
           <header>
             <h1>More than just shorter links</h1>
+
+            <div className="heroSVG--tablet">
+              <HeroSVGTablet></HeroSVGTablet>
+            </div>
+
             <p className="text-md-lg">
               Build your brand’s recognition and get detailed insights on how
               your links are performing.

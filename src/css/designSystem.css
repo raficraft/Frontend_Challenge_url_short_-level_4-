@@ -16,7 +16,7 @@
   --font-sd: 15px; /*15px*/
   --font-xs: 12px; /*12px*/
 
-  --spacing-xl--y: 120px;
+  --spacing-xl--y: 165px;
   --spacing-md--y: 72px;
   --spacing-st--y: 48px;
   --spacing-sm--y: 16px;
@@ -28,23 +28,6 @@
   --container-width: 1440px;
 
   --font: "Poppins", sans-serif;
-}
-
-@media screen and (max-width: 1024px) {
-  :root {
-    --spacing-xl--y: 96px;
-    --spacing-md--y: 32px;
-    --spacing-st--y: 24px;
-    --spacing-sm--y: 16px;
-  }
-}
-@media screen and (max-width: 600px) {
-  :root {
-    --spacing-xl--y: 24px;
-    --spacing-md--y: 24px;
-    --spacing-st--y: 24px;
-    --spacing-sm--y: 24px;
-  }
 }
 
 h1,
@@ -211,8 +194,14 @@ a {
 }
 
 #__Hero {
-  padding: 0 var(--spacing-xl--y);
-  height: 800px;
+  padding: 0 0 0 var(--spacing-xl--y);
+  min-height: 800px;
+}
+
+@media screen and (max-width: 1080px) {
+  #__Hero {
+    padding: 0 var(--spacing-xl--y);
+  }
 }
 
 #__Main {
@@ -223,4 +212,38 @@ a {
 #__Footer {
   padding: var(--spacing-md--y) var(--spacing-xl--y);
   background-color: #232127;
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --spacing-xl--y: 80px;
+    --spacing-md--y: 36px;
+    --spacing-st--y: 24px;
+    --spacing-sm--y: 16px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --spacing-xl--y: 96px;
+    --spacing-md--y: 32px;
+    --spacing-st--y: 24px;
+    --spacing-sm--y: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --spacing-xl--y: 24px;
+    --spacing-md--y: 24px;
+    --spacing-st--y: 24px;
+    --spacing-sm--y: 24px;
+  }
+}
+
+svg {
+  margin: 0;
 }
