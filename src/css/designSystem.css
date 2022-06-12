@@ -15,23 +15,40 @@
   --font-sd: 15px; /*15px*/
   --font-xs: 12px; /*12px*/
 
-  --spacing-xl: 165px;
-  --spacing-md: 64px;
-  --spacing-st: 32px;
-  --spacing-sm: 16px;
+  --spacing-xl--y: 120px;
+  --spacing-md--y: 72px;
+  --spacing-st--y: 48px;
+  --spacing-sm--y: 16px;
+
+  --transition-sd: 0.8s;
+  --transition-sm: 0.5s;
+  --transition-xs: 0.3s;
 
   --container-width: 1440px;
 
   --font: "Poppins", sans-serif;
+}
 
-  @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+  :root {
+    --spacing-xl--y: 96px;
+    --spacing-md--y: 32px;
+    --spacing-st--y: 24px;
+    --spacing-sm--y: 16px;
   }
-  @media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --spacing-xl--y: 24px;
+    --spacing-md--y: 24px;
+    --spacing-st--y: 24px;
+    --spacing-sm--y: 24px;
   }
 }
 
 h1,
 h2 {
+  color: var(--gray-dark);
 }
 h1 {
   font-size: var(--spacing-xl);
@@ -98,10 +115,17 @@ a {
   font-weight: bold;
 }
 
+.nav_burger {
+  font-size: var(--font-sd-lg);
+  color: var(--gray);
+  font-weight: bold;
+}
+
 .btn {
   background-color: var(--green);
   border: none;
   color: var(--light);
+  text-align: center;
 }
 
 .btn_rounded-big {
@@ -189,11 +213,11 @@ a {
 }
 
 #__Header {
-  padding: 3.625rem var(--spacing-xl);
+  padding: 3.625rem var(--spacing-xl--y);
 }
 
 #__Hero {
-  padding: 0 var(--spacing-xl);
+  padding: 0 var(--spacing-xl--y);
   height: 800px;
 }
 
@@ -204,5 +228,5 @@ a {
 
 #__Footer {
   background-color: #232127;
-  padding: var(--spacing-md--y) var(--spacing-xl);
+  padding: var(--spacing-md--y) var(--spacing-xl--y);
 }

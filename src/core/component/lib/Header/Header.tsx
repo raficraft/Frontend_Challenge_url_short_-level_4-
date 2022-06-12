@@ -1,37 +1,60 @@
-import React from "react";
+import React, { SyntheticEvent, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { LOGO } from "../../SVG/LOGO";
 import { HeaderContainer } from "./Header_css";
+import Navigation from "../Navigation/Navigation";
+import BurgerMenu from "../BugerMenu/BurgerMenu";
 
-export default function Header(): JSX.Element {
+type HeaderProps = {
+  children?: React.ReactNode;
+};
+
+export default function Header({ children }: HeaderProps): JSX.Element {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  function closeBurgerMenu() {
+    setIsOpen(false);
+  }
+
+  function toto(e: any) {
+    console.log("toto", e.stopPropagation(true));
+  }
+
   return (
-    <HeaderContainer id="__Header">
-      <div className="header_content">
-        <header>
-          <NavLink to="/">
-            <LOGO className="logo"></LOGO>
-          </NavLink>
-          <nav>
-            <NavLink to="/" className="nav_link">
-              Features
+    <>
+      <HeaderContainer id="__Header">
+        <div className="header_content" onClick={toto}>
+          <header>
+            <NavLink to="/">
+              <LOGO className="logo"></LOGO>
             </NavLink>
-            <NavLink to="/" className="nav_link">
-              Pricing
-            </NavLink>
-            <NavLink to="/" className="nav_link">
-              Ressources
-            </NavLink>
-          </nav>
-        </header>
-        <aside>
-          <NavLink to="/" className="nav_link">
-            Login
-          </NavLink>
-          <NavLink to="/" className="btn btn_rounded-big">
-            Sign Up
-          </NavLink>
-        </aside>
-      </div>
-    </HeaderContainer>
+            <Navigation styles="link"></Navigation>
+          </header>
+          <aside>
+            <div
+              className="burger"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div className="header_login">
+              <NavLink to="/" className="nav_link">
+                Login
+              </NavLink>
+              <NavLink to="/" className="btn btn_rounded-big">
+                Sign Up
+              </NavLink>
+            </div>
+          </aside>
+        </div>
+      </HeaderContainer>
+
+      <BurgerMenu cb={closeBurgerMenu} isOpen={isOpen} />
+    </>
   );
 }
