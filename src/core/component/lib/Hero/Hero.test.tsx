@@ -16,11 +16,7 @@ describe("Navigation component and items is rendered", () => {
   });
 
   test("Navigation items should be rendered", () => {
-    const { getByText, getByPlaceholderText } = render(
-      <Hero>
-        <UrlShort></UrlShort>
-      </Hero>
-    );
+    const { getByText, getByPlaceholderText } = render(<Hero></Hero>);
 
     expect(getByPlaceholderText(/shorten/i)).toBeInTheDocument();
     expect(getByText(/shorten/i)).toBeInTheDocument();

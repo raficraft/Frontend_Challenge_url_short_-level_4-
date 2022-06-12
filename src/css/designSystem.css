@@ -52,8 +52,9 @@ h2 {
   color: var(--gray-dark);
 }
 h1 {
-  font-size: var(--spacing-xl);
+  font-size: var(--font-xl);
   font-weight: bold;
+  line-height: 90px;
   letter-spacing: -2px;
 }
 h2 {
