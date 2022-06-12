@@ -8,12 +8,12 @@ type NavigationProps = {
 
 export default function Hero({ children }: NavigationProps) {
   return (
-    <HeroContainer id="__hero">
-      <section>
-        <div>
+    <HeroContainer id="__Hero">
+      <section className="hero_content">
+        <div className="splash_text">
           <header>
             <h1>More than just shorter links</h1>
-            <p>
+            <p className="text-md-lg">
               Build your brand’s recognition and get detailed insights on how
               your links are performing.
             </p>
