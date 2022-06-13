@@ -194,13 +194,18 @@ a {
 }
 
 #__Hero {
-  padding: 0 0 0 var(--spacing-xl--y);
-  min-height: 800px;
+  padding: 0 0 222px var(--spacing-xl--y);
 }
 
 @media screen and (max-width: 1080px) {
   #__Hero {
     padding: 0 var(--spacing-xl--y);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #__Hero {
+    padding: 0 0 0 24px;
   }
 }
 

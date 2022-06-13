@@ -3,10 +3,14 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.section`
   @media screen and (max-width: 1440px) {
-    padding: 0;
   }
+
   .hero_content {
     ${S.flex("row", "space-between", "center", "nowrap")};
+
+    @media screen and (max-width: 600px) {
+      ${S.flex("column-reverse", "space-between", "flex-start")};
+    }
 
     .splash_text {
       ${S.responsiveContainer("565px")};
@@ -19,6 +23,10 @@ export const HeroContainer = styled.section`
         header {
           ${S.flex("row", "center", "center")};
         }
+      }
+
+      @media screen and (max-width: 600px) {
+        padding: 0 24px 0 0;
       }
 
       h1 {
@@ -50,12 +58,19 @@ export const HeroContainer = styled.section`
 
     .heroSVG {
       ${S.responsiveContainer("610px")}
-      background-color: yellow;
       display: flex;
-      content: " ";
 
       @media screen and (max-width: 1080px) {
         display: none;
+      }
+
+      @media screen and (max-width: 600px) {
+        display: flex;
+        ${S.responsiveContainer("100%")}
+      }
+
+      svg {
+        ${S.responsiveContainer("100%")}
       }
     }
 
@@ -75,6 +90,10 @@ export const HeroContainer = styled.section`
         svg {
           ${S.responsiveContainer("80%")}
         }
+      }
+
+      @media screen and (max-width: 600px) {
+        display: none;
       }
     }
   }

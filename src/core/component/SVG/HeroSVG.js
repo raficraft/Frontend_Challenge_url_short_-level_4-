@@ -234,8 +234,8 @@ export function HeroSVG({ ...props }) {
           y2="390"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#183866" />
-          <stop offset="1" stop-color="#1A7FC1" />
+          <stop stopColor="#183866" />
+          <stop offset="1" stopColor="#1A7FC1" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_0_539"
@@ -246,7 +246,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_0_539"
@@ -257,7 +257,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_0_539"
@@ -268,7 +268,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_0_539"
@@ -279,7 +279,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_0_539"
@@ -290,7 +290,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_0_539"
@@ -301,7 +301,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_0_539"
@@ -312,7 +312,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="1" stop-opacity="0.01" />
+          <stop offset="1" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_0_539"
@@ -322,8 +322,8 @@ export function HeroSVG({ ...props }) {
           y2="244.726"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#183866" />
-          <stop offset="1" stop-color="#1A7FC1" />
+          <stop stopColor="#183866" />
+          <stop offset="1" stopColor="#1A7FC1" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_0_539"
@@ -334,7 +334,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_0_539"
@@ -345,7 +345,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_0_539"
@@ -356,7 +356,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_0_539"
@@ -367,7 +367,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_0_539"
@@ -378,7 +378,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_0_539"
@@ -389,7 +389,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_0_539"
@@ -400,7 +400,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_0_539"
@@ -410,9 +410,9 @@ export function HeroSVG({ ...props }) {
           y2="161.009"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#ECC4D7" />
-          <stop offset="0.42" stop-color="#EFD4D1" />
-          <stop offset="1" stop-color="#F2EAC9" />
+          <stop stopColor="#ECC4D7" />
+          <stop offset="0.42" stopColor="#EFD4D1" />
+          <stop offset="1" stopColor="#F2EAC9" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_0_539"
@@ -422,9 +422,9 @@ export function HeroSVG({ ...props }) {
           y2="233.608"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#ECC4D7" />
-          <stop offset="0.42" stop-color="#EFD4D1" />
-          <stop offset="1" stop-color="#F2EAC9" />
+          <stop stopColor="#ECC4D7" />
+          <stop offset="0.42" stopColor="#EFD4D1" />
+          <stop offset="1" stopColor="#F2EAC9" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_0_539"
@@ -434,9 +434,9 @@ export function HeroSVG({ ...props }) {
           y2="239.852"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#ECC4D7" />
-          <stop offset="0.42" stop-color="#EFD4D1" />
-          <stop offset="1" stop-color="#F2EAC9" />
+          <stop stopColor="#ECC4D7" />
+          <stop offset="0.42" stopColor="#EFD4D1" />
+          <stop offset="1" stopColor="#F2EAC9" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_0_539"
@@ -446,8 +446,8 @@ export function HeroSVG({ ...props }) {
           y2="346.362"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#362958" stop-opacity="0.500601" />
-          <stop offset="1" stop-color="#34313D" stop-opacity="0.01" />
+          <stop stopColor="#362958" stopOpacity="0.500601" />
+          <stop offset="1" stopColor="#34313D" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_0_539"
@@ -458,7 +458,7 @@ export function HeroSVG({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="0.99" stop-opacity="0.01" />
+          <stop offset="0.99" stopOpacity="0.01" />
         </linearGradient>
       </defs>
     </svg>
