@@ -40,6 +40,13 @@ export const HeroContainer = styled.section`
           margin: 0 0 2.5rem 0;
           text-align: center;
         }
+
+        @media screen and (max-width: 600px) {
+          font-size: 42px;
+          line-height : 48px;
+          letter-spacing -1;
+          margin : 2rem  0 1rem 0;
+        }
       }
       p {
         margin: 0 0 2.5rem 0;
@@ -48,6 +55,10 @@ export const HeroContainer = styled.section`
           margin : 0;
           text-align: center;
           margin: 2rem 0;
+        }
+
+        @media screen and (max-width: 600px) {
+          margin: 0 0 2rem 0;
         }
       }
 
