@@ -12,7 +12,7 @@ import { FooterContainer } from "./Footer_css";
 export default function Footer() {
   return (
     <FooterContainer id="__Footer">
-      <header>
+      <header className="footer_header">
         <NavLink to="/">
           <LOGO color="white"></LOGO>
         </NavLink>
@@ -51,13 +51,16 @@ export default function Footer() {
             <NavLink to="/">Contact</NavLink>
           </nav>
         </div>
+
+        <footer>
+          <div className="footer_icon">
+            <IconSocialFacebook color={"white"} />
+            <IconSocialTwitter color={"white"} />
+            <IconSocialPinterest color={"white"} />
+            <IconSocialInstagram color={"white"} />
+          </div>
+        </footer>
       </div>
-      <footer>
-        <IconSocialFacebook />
-        <IconSocialTwitter />
-        <IconSocialPinterest />
-        <IconSocialInstagram />
-      </footer>
     </FooterContainer>
   );
 }
