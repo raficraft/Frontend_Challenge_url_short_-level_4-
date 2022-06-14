@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { LOGO } from "../../SVG/LOGO";
 import {
   IconSocialFacebook,
@@ -13,40 +13,42 @@ export default function Footer() {
   return (
     <FooterContainer id="__Footer">
       <header>
-        <LOGO></LOGO>
+        <NavLink to="/">
+          <LOGO color="white"></LOGO>
+        </NavLink>
       </header>
-      <div>
-        <div>
+      <div className="footer_link">
+        <div className="footer_link--inside">
           <header>
             <h4>Features</h4>
           </header>
           <nav>
-            <Link to="/">Link Shortenning</Link>
-            <Link to="/">Branded Links</Link>
-            <Link to="/">Analytics</Link>
+            <NavLink to="/">Link Shortenning</NavLink>
+            <NavLink to="/">Branded Links</NavLink>
+            <NavLink to="/">Analytics</NavLink>
           </nav>
         </div>
 
-        <div>
+        <div className="footer_link--inside">
           <header>
             <h4>Ressources</h4>
           </header>
           <nav>
-            <Link to="/">Blog</Link>
-            <Link to="/">Developpers</Link>
-            <Link to="/">Support</Link>
+            <NavLink to="/">Blog</NavLink>
+            <NavLink to="/">Developpers</NavLink>
+            <NavLink to="/">Support</NavLink>
           </nav>
         </div>
 
-        <div>
+        <div className="footer_link--inside">
           <header>
             <h4>Company</h4>
           </header>
           <nav>
-            <Link to="/">About</Link>
-            <Link to="/">Our Team</Link>
-            <Link to="/">Carreers</Link>
-            <Link to="/">Contact</Link>
+            <NavLink to="/">About</NavLink>
+            <NavLink to="/">Our Team</NavLink>
+            <NavLink to="/">Carreers</NavLink>
+            <NavLink to="/">Contact</NavLink>
           </nav>
         </div>
       </div>

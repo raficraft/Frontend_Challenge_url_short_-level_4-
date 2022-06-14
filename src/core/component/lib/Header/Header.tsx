@@ -19,7 +19,7 @@ export default function Header({ children }: HeaderProps): JSX.Element {
         <div className="header_content">
           <header>
             <NavLink to="/">
-              <LOGO className="logo"></LOGO>
+              <LOGO className="logo" color="#34313D"></LOGO>
             </NavLink>
             <Navigation styles="link"></Navigation>
           </header>
