@@ -2,7 +2,6 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import BurgerMenu from "../BugerMenu/BurgerMenu";
-import Navigation from "./BurgerMenu";
 
 describe("Navigation component and items is rendered", () => {
   test(" Navigation should be rendered", () => {

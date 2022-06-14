@@ -1,4 +1,5 @@
 import React from "react";
+import BannerFooter from "../BannerFooter/BannerFooter";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
@@ -15,6 +16,7 @@ export default function Layout({ children }: Props) {
 
         <Hero></Hero>
         <main id="__Main">{children}</main>
+        <BannerFooter></BannerFooter>
         <Footer></Footer>
       </section>
     </>
