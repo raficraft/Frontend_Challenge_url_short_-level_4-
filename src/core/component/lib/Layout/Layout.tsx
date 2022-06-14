@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 
@@ -14,9 +15,7 @@ export default function Layout({ children }: Props) {
 
         <Hero></Hero>
         <main id="__Main">{children}</main>
-        <footer id="__Footer">
-          <h1 className="text_light">Footer</h1>
-        </footer>
+        <Footer></Footer>
       </section>
     </>
   );
