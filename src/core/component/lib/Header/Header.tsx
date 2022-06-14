@@ -4,7 +4,6 @@ import { LOGO } from "../../SVG/LOGO";
 import { HeaderContainer } from "./Header_css";
 import Navigation from "../Navigation/Navigation";
 import BurgerMenu from "../BugerMenu/BurgerMenu";
-import e from "express";
 
 type HeaderProps = {
   children?: React.ReactNode;
