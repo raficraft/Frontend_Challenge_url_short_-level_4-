@@ -11,13 +11,12 @@ type CardType = {
 export default function Card({ title, content, icon }: CardType) {
   return (
     <CardContainer>
-      {icon}
+      <span className="svg_container">{icon}</span>
+
       <header>
         <h3>{title}</h3>
       </header>
-      <article>
-        <p>{content}</p>
-      </article>
+      <p>{content}</p>
     </CardContainer>
   );
 }

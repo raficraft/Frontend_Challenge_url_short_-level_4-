@@ -136,6 +136,16 @@ nav,
 section {
   display: block;
 }
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: #eff1f7;
+  position: relative;
+  min-height: 100%;
+}
 body {
   line-height: 1;
   font-family: "Poppins", sans-serif;
@@ -146,6 +156,7 @@ body {
   overflow-x: hidden;
   background-color: #eff1f7;
   position: relative;
+  min-height: 100%;
 }
 
 ol,

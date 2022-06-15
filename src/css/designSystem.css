@@ -215,6 +215,10 @@ a {
 }
 
 #__Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: var(--spacing-xl) var(--spacing-xl--y);
   background-color: #eff1f7;
 }

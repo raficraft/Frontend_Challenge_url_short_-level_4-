@@ -1,18 +1,19 @@
 import React from "react";
 import { IconCustomize, IconRecord, IconStat } from "../../SVG/Card.js/Card";
 import Card from "../Card/Card";
+import { ContentContainer } from "./Content_css";
 
 export default function Content() {
   return (
-    <div>
-      <header>
-        <h2>Advanced Statisics</h2>
-        <p>
+    <ContentContainer>
+      <header className="headerContent">
+        <h2>Advanced Statistics</h2>
+        <p className="text-sd-lg">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
       </header>
-      <article>
+      <article className="cardContainer">
         <Card
           title="Brand Recognition"
           content="Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."
@@ -28,7 +29,8 @@ export default function Content() {
           content="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
           icon={<IconCustomize></IconCustomize>}
         ></Card>
+        <div className="line"></div>
       </article>
-    </div>
+    </ContentContainer>
   );
 }
