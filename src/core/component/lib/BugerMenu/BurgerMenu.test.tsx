@@ -3,8 +3,8 @@ import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import BurgerMenu from "../BugerMenu/BurgerMenu";
 
-describe("Navigation component and items is rendered", () => {
-  test(" Navigation should be rendered", () => {
+describe("BurgerMenu component and items is rendered", () => {
+  test(" BurgerMenu should be rendered", () => {
     const { container } = render(
       <MemoryRouter>
         <BurgerMenu />
@@ -12,14 +12,12 @@ describe("Navigation component and items is rendered", () => {
     );
     expect(container).toBeInTheDocument();
   });
-  test("Navigation items should be rendered", () => {
+  test("BurgerMenu items should be rendered", () => {
     const { getByText, debug } = render(
       <MemoryRouter>
         <BurgerMenu isOpen={true} />
       </MemoryRouter>
     );
-
-    debug();
     expect(getByText(/features/i)).toBeInTheDocument();
     expect(getByText(/pricing/i)).toBeInTheDocument();
     expect(getByText(/ressources/i)).toBeInTheDocument();
