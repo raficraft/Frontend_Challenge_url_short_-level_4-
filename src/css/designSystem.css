@@ -119,7 +119,8 @@ a {
 }
 
 .btn_rounded-big {
-  font-size: var(--font-md) color white;
+  font-size: var(--font-md);
+  color: white;
   font-weight: bold;
   border-radius: 28px;
   text-transform: capitalize;
@@ -127,10 +128,11 @@ a {
 }
 
 .btn--big {
-  font-size: var(--font-md);
+  font-size: 20px;
   font-weight: bold;
-  padding: 18px 40px;
   border-radius: 10px;
+  width: 188px;
+  height: 64px;
 }
 
 .btn--xs {
@@ -165,6 +167,8 @@ a {
   font-weight: 500;
   color: var(--gray-dark);
   letter-spacing: 0.15px;
+  opacity: 50%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .demo {

@@ -2,8 +2,7 @@ import { S } from "../../styled/function";
 import styled from "styled-components";
 
 export const HeroContainer = styled.section`
-  @media screen and (max-width: 1440px) {
-  }
+  position : relative;
 
   .hero_content {
     ${S.flex("row", "space-between", "center", "nowrap")};
@@ -107,5 +106,12 @@ export const HeroContainer = styled.section`
         display: none;
       }
     }
+  }
+
+  footer{    
+    ${S.flex("column", "flex-start", "flex-start")};
+  position: absolute;
+  bottom: 0;
+  width  : calc(100% - (var(--spacing-xl--y) * 2 ));
   }
 `;

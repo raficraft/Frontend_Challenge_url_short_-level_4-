@@ -24,16 +24,4 @@ describe("Navigation component and items is rendered", () => {
     expect(getAllByText(/pricing/i)[0]).toBeInTheDocument();
     expect(getAllByText(/ressources/i)[0]).toBeInTheDocument();
   });
-
-  test("Navigation items should be rendered", () => {
-    const { getAllByText } = render(
-      <MemoryRouter>
-        <Navigation></Navigation>
-      </MemoryRouter>
-    );
-
-    expect(getAllByText(/features/i)[1]).toBeInTheDocument();
-    expect(getAllByText(/pricing/i)[1]).toBeInTheDocument();
-    expect(getAllByText(/ressources/i)[1]).toBeInTheDocument();
-  });
 });

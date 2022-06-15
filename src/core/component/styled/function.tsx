@@ -58,7 +58,7 @@ export const S = {
     return `box-shadow : 0 2px 4px ${color}`;
   },
 
-  centerAbsolute: (size: "string") => {
+  centerAbsolute: (size: string) => {
     return `calc(50% - ${size} / 2)`;
   },
 

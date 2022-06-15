@@ -2,6 +2,7 @@ import React from "react";
 import { HeroContainer } from "./Hero_css";
 import { HeroSVG } from "../../SVG/HeroSVG";
 import HeroSVGTablet from "../../SVG/HeroSVGTablet";
+import UrlShort from "../UrlShort/UrlShort";
 
 type NavigationProps = {
   children?: React.ReactNode;
@@ -34,7 +35,9 @@ export default function Hero({ children }: NavigationProps) {
           <HeroSVG></HeroSVG>
         </div>
       </section>
-      <footer></footer>
+      <footer>
+        <UrlShort></UrlShort>
+      </footer>
     </HeroContainer>
   );
 }
