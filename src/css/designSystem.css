@@ -113,6 +113,11 @@ a {
   transition: var(--transition-sm);
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: gray;
+}
+
 .btn:hover {
   transition: var(--transition-sm);
   background-color: var(--green-hover);
@@ -133,6 +138,21 @@ a {
   border-radius: 10px;
   width: 188px;
   height: 64px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .btn--big {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .btn--big {
+    height: 3rem;
+    font-size: 1.125rem;
+  }
 }
 
 .btn--xs {
@@ -152,7 +172,6 @@ a {
 }
 
 .search {
-  min-width: 80%;
   padding: 14px 2rem;
   font-size: var(--font-md);
   font-weight: 500;
@@ -160,6 +179,7 @@ a {
   letter-spacing: 0.15px;
   border: none;
   border-radius: 10px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .search::placeholder {
@@ -167,8 +187,28 @@ a {
   font-weight: 500;
   color: var(--gray-dark);
   letter-spacing: 0.15px;
-  opacity: 50%;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 50%;
+  text-indent: 0;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 760px) {
+  .search {
+    height: 3rem;
+    padding: 0px 16px;
+    border-radius: 5px;
+    line-height: 42px;
+    font-size: 16px;
+    letter-spacing: 0.12px;
+  }
+
+  .search::placeholder {
+    font-size: 16px;
+    letter-spacing: 0.12px;
+    font-weight: 700;
+  }
 }
 
 .demo {

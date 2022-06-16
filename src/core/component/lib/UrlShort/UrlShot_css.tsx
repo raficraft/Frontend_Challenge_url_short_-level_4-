@@ -1,40 +1,99 @@
 import { S } from "../../styled/function";
 import styled from "styled-components";
 
-export const UrlShortContainer = styled.div`
-  padding: 52px 64px;
-  background-color: var(--violet-dark);
-  width: 100%;
-  ${S.flexCenter()}
-  ${S.flex("column", "center", "flex-start")};
-  border-radius: 10px;
-  position: absolute;
-  overflow: hidden;
-  ${S.size("1100px", "168px")}
-  top : calc(50% - 164px / 2);
+export const UrlShortContainer = styled.section`
+  ${S.flex("column", "flex-start", "flex-start")};
+  position: relative ${S.responsiveContainer("100%")};
+  padding: 0 var(--spacing-xl--y);
+  height: auto;
 
-  .bloc_input {
-    ${S.responsiveContainer("100%")}
-    ${S.flexCenter()};
-    margin: 0 0 0.5rem 0;
-    z-index: 100;
+  .urlShort_container {
+    ${S.flex("column", "center", "flex-start")};
+    ${S.responsiveContainer("100%")};
+    top: 82px;
 
-    .search {
-      margin: 0 1rem 0rem 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 52px 64px;
+    border-radius: 10px;
+    background-color: var(--violet-dark);
+    z-index: 500;
+
+    @media screen and (max-width: 1080px) {
+      padding: 24px;
     }
-  }
 
-  .forme {
-    position: absolute;
-  }
+    .bloc_input {
+      ${S.flexCenter()};
+      width: 100%;
+      margin: 0 0 0.5rem 0;
+      z-index: 100;
 
-  .bottomLeft {
-    top: 29px;
-    left: -134px;
-  }
+      @media screen and (max-width: 1080px) {
+        ${S.flex("column", "center", "flex-start")};
+      }
+    }
 
-  .topRight {
-    left: 647px;
-    top: -184px;
+    .bloc-input-item {
+      position: relative;
+      width: 100%;
+      margin: 0 1rem 0rem 0;
+      flex: 1;
+
+      @media screen and (max-width: 1080px) {
+        margin: 0 0 38px 0;
+      }
+
+      .search {
+        width: 100%;
+      }
+
+      .error-message {
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+        font-weight: 500;
+        font-style: italic;
+        color: #f46363;
+      }
+    }
+
+    .forme {
+      position: absolute;
+    }
+
+    .bottomLeft {
+      top: 29px;
+      left: -134px;
+    }
+
+    .topRight {
+      right: -252px;
+      top: -184px;
+    }
+
+    @media screen and (max-width: 1080px) {
+      .bottomLeft {
+        top: 89px;
+        left: -334px;
+      }
+
+      .topRight {
+        right: -287px;
+        top: -114px;
+      }
+    }
+
+    @media screen and (max-width: 860px) {
+      .bottomLeft {
+        display: none;
+      }
+
+      .topRight {
+        right: -477px;
+        top: -89px;
+      }
+    }
   }
 `;

@@ -108,10 +108,5 @@ export const HeroContainer = styled.section`
     }
   }
 
-  footer{    
-    ${S.flex("column", "flex-start", "flex-start")};
-  position: absolute;
-  bottom: 0;
-  width  : calc(100% - (var(--spacing-xl--y) * 2 ));
-  }
+ 
 `;

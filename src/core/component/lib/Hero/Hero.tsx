@@ -35,9 +35,6 @@ export default function Hero({ children }: NavigationProps) {
           <HeroSVG></HeroSVG>
         </div>
       </section>
-      <footer>
-        <UrlShort></UrlShort>
-      </footer>
     </HeroContainer>
   );
 }
