@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { LOGO } from "../../SVG/LOGO";
 import { HeaderContainer } from "./Header_css";

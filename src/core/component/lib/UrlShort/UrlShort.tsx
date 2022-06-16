@@ -1,12 +1,16 @@
 import { url } from "inspector";
 import React, { useRef, useState } from "react";
 import Forme from "../../SVG/Forme";
+import LinkGenerateByApi from "../LinkGenerateByApi/LinkGenerateByApi";
 import { UrlShortContainer } from "./UrlShot_css";
+import { useEffect } from "react";
+import { manageStorage } from "./manageStorage";
 
 export default function UrlShort() {
   const [error, setError] = useState<boolean | string>("Please add link");
   const [isDisabled, setIsDisabled] = useState<string>("");
-  const [linkCollection, setLinkCollection] = useState<[]>([]);
+  const [resultApi, setResultApi] = useState<[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const inputRef = React.useRef<HTMLInputElement | null>(null);
   function handleChange() {
@@ -29,7 +33,6 @@ export default function UrlShort() {
   }
 
   function handleClick() {
-    console.log("click");
     fetchData(inputRef?.current?.value ? inputRef.current.value : "");
   }
 
@@ -43,24 +46,42 @@ export default function UrlShort() {
   }
 
   async function fetchData(url: string) {
-    console.log("fetch");
+    setLoading(true);
     try {
       const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
       const data = await res.json();
       if (data.ok) {
+        console.log(data);
         setError(false);
-
-        createShortLink(data.result);
+        const newResult = manageStorage(data.result);
+        setTimeout(() => {
+          setResultApi(newResult);
+          setLoading(false);
+        }, 100);
       }
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
   }
 
-  function createShortLink(result: {}) {
-    const toto = document.querySelector("#__toto");
+  function resetData() {
+    localStorage.removeItem("url_short");
+    setResultApi([]);
   }
+
+  function loadStorage() {
+    const oldItems = JSON.parse(localStorage.getItem("url_short") || "[]")
+      ? JSON.parse(localStorage.getItem("url_short") || "[]")
+      : [];
+
+    console.log(oldItems);
+
+    oldItems.length !== 0 && setResultApi(oldItems);
+  }
+
+  useEffect(() => {
+    loadStorage();
+  }, []);
 
   return (
     <>
@@ -79,14 +100,21 @@ export default function UrlShort() {
                 <p>{error && error}</p>
               </span>
             </div>
-            <button
-              type="button"
-              className="btn btn--big"
-              onClick={handleClick}
-              disabled={!isDisabled}
-            >
-              Shorten it!
-            </button>
+
+            {loading ? (
+              <button type="button" className="btn btn--big" disabled>
+                loading...
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="btn btn--big"
+                onClick={handleClick}
+                disabled={!isDisabled}
+              >
+                Shorten it!
+              </button>
+            )}
           </div>
 
           <Forme
@@ -99,24 +127,19 @@ export default function UrlShort() {
             width="715px"
             height="409px"
           ></Forme>
+          <button
+            type="button"
+            onClick={() => {
+              resetData();
+            }}
+            className="btn reset_local"
+          >
+            Reset all
+          </button>
         </div>
       </UrlShortContainer>
 
-      <LinkGenerateByApi></LinkGenerateByApi>
+      {resultApi.length !== 0 && <LinkGenerateByApi></LinkGenerateByApi>}
     </>
-  );
-}
-
-export function LinkGenerateByApi(): JSX.Element {
-  return (
-    <section style={{ backgroundColor: "#eff1f7", paddingTop: "164px" }}>
-      <h1>Toto</h1>
-      <h1>Toto</h1>
-      <h1>Toto</h1>
-      <h1>Toto</h1>
-      <h1>Toto</h1>
-      <h1>Toto</h1>
-      <h1>Toto</h1>
-    </section>
   );
 }

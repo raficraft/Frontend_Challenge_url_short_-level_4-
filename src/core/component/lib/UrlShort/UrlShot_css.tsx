@@ -96,4 +96,22 @@ export const UrlShortContainer = styled.section`
       }
     }
   }
+
+  .reset_local {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    ${S.size("100px", "24px")}
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: pointer;
+    font-style: italic;
+    color: #f46363;
+    font-weight: 700;
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
 `;

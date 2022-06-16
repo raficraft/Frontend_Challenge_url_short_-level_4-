@@ -17,7 +17,6 @@ export default function Layout({ children }: Props) {
 
         <Hero></Hero>
         <UrlShort></UrlShort>
-
         <main id="__Main">{children}</main>
         <BannerFooter></BannerFooter>
         <Footer></Footer>
