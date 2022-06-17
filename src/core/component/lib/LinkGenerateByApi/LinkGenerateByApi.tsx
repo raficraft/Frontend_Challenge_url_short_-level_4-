@@ -49,7 +49,7 @@ export default function LinkGenerateByApi() {
           <div className="link_container" key={key}>
             <div className="link_content">
               <p className="text-md-lg current_link">{el.original_link}</p>
-
+              <hr className="seperator"></hr>
               <p className="text-md-lg short_link">{el.short_url}</p>
             </div>
             <input
@@ -58,16 +58,20 @@ export default function LinkGenerateByApi() {
               type="hidden"
               value={el.short_url}
             ></input>
-            <button
-              className="btn btn--xs"
-              data-active="false"
-              ref={inputRef.current[key]}
-              onClick={(e) => {
-                handleClick(e);
-              }}
-            >
-              Copy
-            </button>
+
+            <div className="btn_container">
+              <button
+                className="btn btn--xs"
+                data-active="false"
+                ref={inputRef.current[key]}
+                type="button"
+                onClick={(e) => {
+                  handleClick(e);
+                }}
+              >
+                Copy
+              </button>
+            </div>
           </div>
         );
       }

@@ -111,6 +111,7 @@ a {
   background-color: var(--green);
   border: none;
   transition: var(--transition-sm);
+  cursor: pointer;
 }
 
 .btn:disabled {
