@@ -266,7 +266,7 @@ a {
 }
 
 #__Header {
-  padding: 3.625rem var(--spacing-xl--y);
+  padding: 3rem var(--spacing-xl--y) 23px;
 }
 
 #__Hero {
@@ -296,7 +296,7 @@ a {
 
 @media screen and (max-width: 600px) {
   #__Hero {
-    padding: 0 0 168px 24px;
+    padding: 0 0 100px 24px;
   }
 }
 
@@ -333,6 +333,14 @@ a {
     --spacing-md--y: 32px;
     --spacing-st--y: 24px;
     --spacing-sm--y: 16px;
+  }
+
+  #__Header {
+    padding: 2.5rem var(--spacing-xl--y) 23px;
+  }
+
+  #__Main {
+    padding: 80px var(--spacing-xl--y) 80px var(--spacing-xl--y);
   }
 }
 @media screen and (max-width: 600px) {

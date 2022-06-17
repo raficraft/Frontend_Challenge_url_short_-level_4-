@@ -75,12 +75,16 @@ export const HeroContainer = styled.section`
       }
 
       @media screen and (max-width: 600px) {
-        display: flex;
-        ${S.responsiveContainer("100%")};
+        display: none;
       }
+    }
 
-      svg {
-        ${S.responsiveContainer("100%")};
+    .heroSVG--mobil {
+      display: none;
+      ${S.responsiveContainer("100%")}
+
+      @media screen and (max-width: 600px) {
+        ${S.flex("row", "flex-end", "space-between", "no-wrap")};
       }
     }
 
@@ -88,7 +92,7 @@ export const HeroContainer = styled.section`
       display: none;
       @media screen and (max-width: 1080px) {
         ${S.responsiveContainer("100%")}
-        display: red;
+
         ${S.flexCenter()}
         margin: 0;
         svg {

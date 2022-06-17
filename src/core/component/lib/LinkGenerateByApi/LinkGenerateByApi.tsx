@@ -15,6 +15,8 @@ export default function LinkGenerateByApi() {
     )
   );
 
+  const inputHiddenRef = React.createRef<HTMLInputElement>();
+
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     console.log(inputRef);
     console.log(e.target);
@@ -57,6 +59,7 @@ export default function LinkGenerateByApi() {
               name="input_short_url"
               type="hidden"
               value={el.short_url}
+              ref={inputHiddenRef}
             ></input>
 
             <div className="btn_container">

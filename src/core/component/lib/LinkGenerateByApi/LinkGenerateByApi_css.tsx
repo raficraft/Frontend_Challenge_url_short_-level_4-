@@ -12,6 +12,7 @@ export const LinkGenerateByApiContainer = styled.section`
     @media screen and (max-width: 960px) {
       ${S.flex("column", "space-between", "center")}
       padding : 6px 0 1rem 0;
+      gap: 8px;
     }
   }
 
@@ -40,23 +41,26 @@ export const LinkGenerateByApiContainer = styled.section`
 
     @media screen and (max-width: 960px) {
       ${S.flex("column", "flex-start", "center")}
+      max-height: 155px;
 
       .current_link {
         ${S.responsiveContainer("100%")}
         padding: 0 1rem 6px 1rem;
+        font-size: 16px;
       }
 
       .short_link {
         ${S.responsiveContainer("100%")}
         text-align: left;
         padding: 6px 1rem 0px 1rem;
+        font-size: 16px;
       }
     }
   }
 
   .seperator {
     height: 1px;
-    background-color: #9e9aa8;
+    background-color: rgba(158, 154, 168, 0.5);
     border: none;
     width: 100%;
     margin: 0;
@@ -64,12 +68,16 @@ export const LinkGenerateByApiContainer = styled.section`
   }
 
   @media screen and (max-width: 960px) {
+    p {
+      line-height: 36px;
+    }
     .btn_container {
       width: 100%;
       padding: 0 1rem;
     }
 
     .btn--xs {
+      font-size: 16px;
       width: 100%;
     }
 

@@ -3,6 +3,7 @@ import { HeroContainer } from "./Hero_css";
 import { HeroSVG } from "../../SVG/HeroSVG";
 import HeroSVGTablet from "../../SVG/HeroSVGTablet";
 import UrlShort from "../UrlShort/UrlShort";
+import HeroSVGMobil from "../../SVG/HeroSVGMobil";
 
 type NavigationProps = {
   children?: React.ReactNode;
@@ -33,6 +34,9 @@ export default function Hero({ children }: NavigationProps) {
 
         <div className="heroSVG">
           <HeroSVG></HeroSVG>
+        </div>
+        <div className="heroSVG--mobil">
+          <HeroSVGMobil></HeroSVGMobil>
         </div>
       </section>
     </HeroContainer>
