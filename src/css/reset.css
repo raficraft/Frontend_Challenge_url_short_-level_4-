@@ -157,6 +157,7 @@ body {
   background-color: #eff1f7;
   position: relative;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 ol,

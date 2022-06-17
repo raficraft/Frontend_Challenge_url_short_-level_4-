@@ -14,8 +14,15 @@ export default function Hero({ children }: NavigationProps) {
     const apiInput: HTMLInputElement | null =
       document.querySelector("#apiInput");
     if (apiInput) {
-      apiInput.focus();
-      apiInput.scrollIntoView();
+      const topPosition: DOMRect = apiInput.getBoundingClientRect();
+      window.scroll({
+        behavior: "smooth",
+        top:
+          topPosition.y < 0
+            ? topPosition.top + window.screen.height / 2
+            : topPosition.top - window.screen.height / 2,
+      });
+      apiInput.focus({ preventScroll: true });
     }
   }
 
