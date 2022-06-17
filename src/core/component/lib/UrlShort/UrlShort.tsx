@@ -112,6 +112,7 @@ export default function UrlShort() {
                 className="search"
                 ref={inputRef}
                 onChange={handleChange}
+                id="apiInput"
               />
               <span className="error-message">
                 <p>{error && error}</p>

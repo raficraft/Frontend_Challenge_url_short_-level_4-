@@ -11,16 +11,13 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <>
-      <section id="__Layout">
-        <Header></Header>
-
-        <Hero></Hero>
-        <UrlShort></UrlShort>
-        <main id="__Main">{children}</main>
-        <BannerFooter></BannerFooter>
-        <Footer></Footer>
-      </section>
-    </>
+    <section id="__Layout">
+      <Header></Header>
+      <Hero></Hero>
+      <UrlShort></UrlShort>
+      <main id="__Main">{children}</main>
+      <BannerFooter></BannerFooter>
+      <Footer></Footer>
+    </section>
   );
 }

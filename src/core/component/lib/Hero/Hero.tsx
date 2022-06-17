@@ -10,6 +10,15 @@ type NavigationProps = {
 };
 
 export default function Hero({ children }: NavigationProps) {
+  function handleClick() {
+    const apiInput: HTMLInputElement | null =
+      document.querySelector("#apiInput");
+    if (apiInput) {
+      apiInput.focus();
+      apiInput.scrollIntoView();
+    }
+  }
+
   return (
     <HeroContainer id="__Hero">
       <section className="hero_content">
@@ -27,7 +36,11 @@ export default function Hero({ children }: NavigationProps) {
             </p>
           </header>
 
-          <button type="button" className="btn btn_rounded-big">
+          <button
+            type="button"
+            className="btn btn_rounded-big"
+            onClick={handleClick}
+          >
             Get started
           </button>
         </div>
