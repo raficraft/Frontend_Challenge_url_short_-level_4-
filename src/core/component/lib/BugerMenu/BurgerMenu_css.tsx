@@ -11,6 +11,7 @@ export const BurgerMenuContainer = styled.div`
   background: rgba(255, 255, 255, 0.6);
   transform: translateY(-200%);
   transition: var(--transition-sd);
+  z-index: 2000;
 
   &[data-isopen="true"] {
     transform: translateY(0);

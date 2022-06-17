@@ -133,6 +133,15 @@ a {
   padding: 9px 22px;
 }
 
+.btn_rounded-medium {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 28px;
+  text-transform: capitalize;
+  padding: 13px 22px;
+}
+
 .btn_rounded-small {
   font-size: 15px;
   color: white;

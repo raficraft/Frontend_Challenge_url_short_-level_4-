@@ -17,7 +17,7 @@ export default function BurgerMenu({ cb, isOpen }: BurgerMenuProps) {
           <NavLink to="/" className="nav_burger">
             Login
           </NavLink>
-          <NavLink to="/" className="btn btn_rounded-big full_w">
+          <NavLink to="/" className="btn btn_rounded-medium full_w">
             Sign up
           </NavLink>
         </footer>
