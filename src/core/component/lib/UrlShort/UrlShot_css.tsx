@@ -3,14 +3,16 @@ import styled from "styled-components";
 
 export const UrlShortContainer = styled.section`
   ${S.flex("column", "flex-start", "flex-start")};
-  position: relative ${S.responsiveContainer("100%")};
+  position: relative;
+  ${S.responsiveContainer("100%")};
   padding: 0 var(--spacing-xl--y);
   height: auto;
+  top: 0px;
+  margin: 0 0 16px 0;
 
   .urlShort_container {
     ${S.flex("column", "center", "flex-start")};
     ${S.responsiveContainer("100%")};
-    top: 82px;
 
     position: relative;
     overflow: hidden;
@@ -108,9 +110,9 @@ export const UrlShortContainer = styled.section`
     line-height: 18px;
     cursor: pointer;
     font-style: italic;
-    color: #f46363;
     font-weight: 700;
     &:hover {
+      color: #f46363;
       letter-spacing: 1px;
     }
   }

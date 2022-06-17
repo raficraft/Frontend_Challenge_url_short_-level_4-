@@ -47,17 +47,27 @@ export default function UrlShort() {
 
   async function fetchData(url: string) {
     setLoading(true);
+    setError("Public API, please wait...");
     try {
       const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
       const data = await res.json();
+
+      console.log(data);
+
       if (data.ok) {
         console.log(data);
         setError(false);
         const newResult = manageStorage(data.result);
         setTimeout(() => {
           setResultApi(newResult);
+          setError(false);
           setLoading(false);
+          resetInput();
         }, 100);
+      } else {
+        setError(data.error);
+        setLoading(false);
+        resetInput();
       }
     } catch (error) {
       console.log(error);
@@ -67,6 +77,7 @@ export default function UrlShort() {
   function resetData() {
     localStorage.removeItem("url_short");
     setResultApi([]);
+    resetInput();
   }
 
   function loadStorage() {
@@ -79,13 +90,19 @@ export default function UrlShort() {
     oldItems.length !== 0 && setResultApi(oldItems);
   }
 
+  function resetInput() {
+    if (inputRef.current) {
+      inputRef.current.value = "";
+    }
+  }
+
   useEffect(() => {
     loadStorage();
   }, []);
 
   return (
     <>
-      <UrlShortContainer>
+      <UrlShortContainer id="__url_short">
         <div className="urlShort_container">
           <div className="bloc_input">
             <div className="bloc-input-item">

@@ -47,8 +47,11 @@ export default function LinkGenerateByApi() {
       ) => {
         return (
           <div className="link_container" key={key}>
-            <p className="text-md-lg ">{el.original_link}</p>
-            <p className="text-md-lg short_link">{el.short_url}</p>
+            <div className="link_content">
+              <p className="text-md-lg current_link">{el.original_link}</p>
+
+              <p className="text-md-lg short_link">{el.short_url}</p>
+            </div>
             <input
               id="input_short_url"
               name="input_short_url"

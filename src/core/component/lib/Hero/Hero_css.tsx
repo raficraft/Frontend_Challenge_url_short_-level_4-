@@ -2,7 +2,7 @@ import { S } from "../../styled/function";
 import styled from "styled-components";
 
 export const HeroContainer = styled.section`
-  position : relative;
+  position: relative;
 
   .hero_content {
     ${S.flex("row", "space-between", "center", "nowrap")};
@@ -42,16 +42,16 @@ export const HeroContainer = styled.section`
 
         @media screen and (max-width: 600px) {
           font-size: 42px;
-          line-height : 48px;
-          letter-spacing -1;
-          margin : 2rem  0 1rem 0;
+          line-height: 48px;
+          letter-spacing: -1px;
+          margin: 2rem 0 1rem 0;
         }
       }
       p {
         margin: 0 0 2.5rem 0;
         @media screen and (max-width: 1080px) {
-          ${S.responsiveContainer("100%")}
-          margin : 0;
+          ${S.responsiveContainer("100%")};
+          margin: 0;
           text-align: center;
           margin: 2rem 0;
         }
@@ -62,12 +62,12 @@ export const HeroContainer = styled.section`
       }
 
       button {
-        ${S.size("197px", "56px")}
+        ${S.size("197px", "56px")};
       }
     }
 
     .heroSVG {
-      ${S.responsiveContainer("610px")}
+      ${S.responsiveContainer("610px")};
       display: flex;
 
       @media screen and (max-width: 1080px) {
@@ -76,11 +76,11 @@ export const HeroContainer = styled.section`
 
       @media screen and (max-width: 600px) {
         display: flex;
-        ${S.responsiveContainer("100%")}
+        ${S.responsiveContainer("100%")};
       }
 
       svg {
-        ${S.responsiveContainer("100%")}
+        ${S.responsiveContainer("100%")};
       }
     }
 
@@ -107,6 +107,4 @@ export const HeroContainer = styled.section`
       }
     }
   }
-
- 
 `;

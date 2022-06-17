@@ -38,7 +38,7 @@ export default function Header({ children }: HeaderProps): JSX.Element {
               <NavLink to="/" className="nav_link">
                 Login
               </NavLink>
-              <NavLink to="/" className="btn btn_rounded-big">
+              <NavLink to="/" className="btn btn_rounded-small">
                 Sign Up
               </NavLink>
             </div>
