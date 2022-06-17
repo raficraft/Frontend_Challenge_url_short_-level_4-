@@ -31,6 +31,11 @@ export default function LinkGenerateByApi() {
       console.log(e.currentTarget.dataset);
       e.currentTarget.dataset.active = "true";
       e.currentTarget.textContent = "Copied!";
+
+      if (inputHiddenRef.current) {
+        const copyLink = inputHiddenRef.current.value;
+        navigator.clipboard.writeText(copyLink);
+      }
     }
   }
 
