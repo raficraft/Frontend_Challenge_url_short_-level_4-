@@ -2,7 +2,6 @@ import React from "react";
 import { IconCustomize, IconRecord, IconStat } from "../../SVG/Card.js/Card";
 import Card from "../Card/Card";
 import { ContentContainer } from "./Content_css";
-import UrlShort from "../UrlShort/UrlShort";
 
 export default function Content() {
   return (

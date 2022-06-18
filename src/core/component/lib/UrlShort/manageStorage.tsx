@@ -1,5 +1,4 @@
 export function manageStorage(data: any) {
-  console.log(data);
   const storageData = {
     original_link: data.original_link,
     short_url: data.full_short_link,

@@ -1,5 +1,4 @@
 import React from "react";
-import { string } from "yargs";
 import { CardContainer } from "./Card_css";
 
 type CardType = {

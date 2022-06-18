@@ -18,9 +18,6 @@ export default function LinkGenerateByApi() {
   const inputHiddenRef = React.createRef<HTMLInputElement>();
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
-    console.log(inputRef);
-    console.log(e.target);
-
     for (const btn of inputRef.current) {
       if (btn.current) {
         btn.current.dataset.active = "false";
@@ -28,7 +25,6 @@ export default function LinkGenerateByApi() {
     }
 
     if (e.currentTarget) {
-      console.log(e.currentTarget.dataset);
       e.currentTarget.dataset.active = "true";
       e.currentTarget.textContent = "Copied!";
 
@@ -90,9 +86,6 @@ export default function LinkGenerateByApi() {
     const oldItems = JSON.parse(localStorage.getItem("url_short") || "[]")
       ? JSON.parse(localStorage.getItem("url_short") || "[]")
       : [];
-
-    console.log(oldItems);
-
     oldItems.length !== 0 && setCollection(oldItems);
   }
 

@@ -1,5 +1,4 @@
-import { url } from "inspector";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Forme from "../../SVG/Forme";
 import LinkGenerateByApi from "../LinkGenerateByApi/LinkGenerateByApi";
 import { UrlShortContainer } from "./UrlShot_css";
@@ -52,10 +51,7 @@ export default function UrlShort() {
       const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
       const data = await res.json();
 
-      console.log(data);
-
       if (data.ok) {
-        console.log(data);
         setError(false);
         const newResult = manageStorage(data.result);
         setTimeout(() => {
@@ -84,8 +80,6 @@ export default function UrlShort() {
     const oldItems = JSON.parse(localStorage.getItem("url_short") || "[]")
       ? JSON.parse(localStorage.getItem("url_short") || "[]")
       : [];
-
-    console.log(oldItems);
 
     oldItems.length !== 0 && setResultApi(oldItems);
   }

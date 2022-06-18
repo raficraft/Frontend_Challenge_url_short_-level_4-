@@ -2,7 +2,6 @@ import React from "react";
 import { HeroContainer } from "./Hero_css";
 import { HeroSVG } from "../../SVG/HeroSVG";
 import HeroSVGTablet from "../../SVG/HeroSVGTablet";
-import UrlShort from "../UrlShort/UrlShort";
 import HeroSVGMobil from "../../SVG/HeroSVGMobil";
 
 type NavigationProps = {
@@ -11,8 +10,9 @@ type NavigationProps = {
 
 export default function Hero({ children }: NavigationProps) {
   function handleClick() {
-    const apiInput: HTMLInputElement | null =
-      document.querySelector("#apiInput");
+    const apiInput: HTMLInputElement | null = document.querySelector(
+      "#apiInput"
+    );
     if (apiInput) {
       const topPosition: DOMRect = apiInput.getBoundingClientRect();
       window.scroll({
