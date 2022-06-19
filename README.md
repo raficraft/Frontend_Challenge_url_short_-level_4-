@@ -43,7 +43,7 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [Typescript](https://www.typescriptlang.org/) - Typescript
 - [Styled Components](https://styled-components.com/) - For styles
-- [API](https://shrtco.de/) API URL short features
+- [API](https://shrtco.de/) URL short features
 - CSS custom properties
 - Flexbox
 
