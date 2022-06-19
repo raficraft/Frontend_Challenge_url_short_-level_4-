@@ -41,6 +41,7 @@ Users should be able to:
 ### Built with
 
 - [Next.js](https://nextjs.org/) - React framework
+- [Typescript](https://www.typescriptlang.org/) - Typescript
 - [Styled Components](https://styled-components.com/) - For styles
 - [API](https://shrtco.de/) API URL short features
 - CSS custom properties
