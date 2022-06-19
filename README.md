@@ -40,12 +40,11 @@ Users should be able to:
 
 ### Built with
 
-- React.js
-- CSS custom properties
-- Flexbox
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 - [API](https://shrtco.de/) API URL short features
+- CSS custom properties
+- Flexbox
 
 
 ### Useful resources
