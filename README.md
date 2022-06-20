@@ -39,8 +39,8 @@ Users should be able to:
 
 - [React.js](https://fr.reactjs.org/) - React framework
 - [Typescript](https://www.typescriptlang.org/) - Typescript
-- [Jest](https://jestjs.io/fr/) - Testing Tools
 - [Styled Components](https://styled-components.com/) - For styles
+- [Jest](https://jestjs.io/fr/) - Testing Tools
 - [API](https://shrtco.de/) URL short features
 - [React-helmet](https://www.npmjs.com/package/react-helmet) Manage head document
 - Multiple SVG component
@@ -50,7 +50,7 @@ Users should be able to:
 ## Author
 
 - Portfolio - [Parodi raphaël](https://frontend-challenge-url-short-level-4.vercel.app/)
-- Linkedin - [Parodi raphaël]()
+- Linkedin - [Parodi raphaël](https://www.linkedin.com/in/%F0%9F%9A%80-raphael-parodi-a942ab1b0/)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/raficraft)
 
 
