@@ -39,6 +39,7 @@ Users should be able to:
 
 - [React.js](https://fr.reactjs.org/) - React framework
 - [Typescript](https://www.typescriptlang.org/) - Typescript
+- [Jest](https://jestjs.io/fr/) - Testing Tools
 - [Styled Components](https://styled-components.com/) - For styles
 - [API](https://shrtco.de/) URL short features
 - [React-helmet](https://www.npmjs.com/package/react-helmet) Manage head document
