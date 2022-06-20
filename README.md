@@ -9,9 +9,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
     - [Links](#links)
-  - [My process](#my-process)
     - [Built with](#built-with)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
 
 
@@ -36,22 +34,19 @@ Users should be able to:
 
 - Live Site URL: [https://vercel.com/raficraft/frontend-challenge-url-short-level-4](https://your-live-site-url.com)
 
-## My process
 
 ### Built with
 
-- [Next.js](https://nextjs.org/) - React framework
+- [React.js](https://fr.reactjs.org/) - React framework
 - [Typescript](https://www.typescriptlang.org/) - Typescript
 - [Styled Components](https://styled-components.com/) - For styles
 - [API](https://shrtco.de/) URL short features
+- [React-helmet](https://www.npmjs.com/package/react-helmet) Manage head document
 - CSS custom properties
 - Flexbox
 
 
-### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
