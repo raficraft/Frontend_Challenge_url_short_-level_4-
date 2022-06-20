@@ -42,15 +42,14 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 - [API](https://shrtco.de/) URL short features
 - [React-helmet](https://www.npmjs.com/package/react-helmet) Manage head document
+- Multiple SVG component
 - CSS custom properties
 - Flexbox
-
-
-
 
 ## Author
 
 - Portfolio - [Parodi raphaël](https://frontend-challenge-url-short-level-4.vercel.app/)
+- Linkedin - [Parodi raphaël]()
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/raficraft)
 
 
