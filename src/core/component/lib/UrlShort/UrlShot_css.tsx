@@ -45,6 +45,7 @@ export const UrlShortContainer = styled.section`
       position: relative;
       width: 100%;
       flex: 1;
+      margin: 0 1rem 0 0;
 
       @media screen and (max-width: 1080px) {
         margin: 0 0 24px 0;
