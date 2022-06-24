@@ -98,29 +98,35 @@ export default function UrlShort() {
     <>
       <UrlShortContainer id="__url_short">
         <div className="urlShort_container">
-          <div className="bloc_input">
-            <div className="bloc-input-item">
-              <input
-                type="text"
-                placeholder="Shorten a link here..."
-                className="search"
-                ref={inputRef}
-                onChange={handleChange}
-                id="apiInput"
-              />
-              <span className="error-message">
-                <p>{error && error}</p>
-              </span>
+          <div className="submit">
+            <div className="bloc_input">
+              <div className="bloc-input-item">
+                <input
+                  type="text"
+                  placeholder="Shorten a link here..."
+                  className="search"
+                  ref={inputRef}
+                  onChange={handleChange}
+                  id="apiInput"
+                />
+                <span className="error-message">
+                  <p>{error && error}</p>
+                </span>
+              </div>
             </div>
 
             {loading ? (
-              <button type="button" className="btn btn--big" disabled>
+              <button
+                type="button"
+                className="btn btn--big btn--submit"
+                disabled
+              >
                 loading...
               </button>
             ) : (
               <button
                 type="button"
-                className="btn btn--big"
+                className="btn btn--big btn--submit"
                 onClick={handleClick}
                 disabled={!isDisabled}
               >

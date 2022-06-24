@@ -2,7 +2,7 @@ import { S } from "../../styled/function";
 import styled from "styled-components";
 
 export const UrlShortContainer = styled.section`
-  ${S.flex("column", "flex-start", "flex-start")};
+  ${S.flex("row", "flex-start", "flex-start")};
   position: relative;
   ${S.responsiveContainer("100%")};
   padding: 0 var(--spacing-xl--y);
@@ -25,12 +25,16 @@ export const UrlShortContainer = styled.section`
     @media screen and (max-width: 1080px) {
       padding: 24px;
     }
+    .submit {
+      ${S.flex("row", "space-between", "flex-start")};
+      ${S.responsiveContainer("100%")};
+      z-index: 1000;
+    }
 
     .bloc_input {
       ${S.flexCenter()};
-      width: 100%;
-      margin: 0 0 0.5rem 0;
       z-index: 100;
+      flex: 1;
 
       @media screen and (max-width: 1080px) {
         ${S.flex("column", "center", "flex-start")};
@@ -40,11 +44,10 @@ export const UrlShortContainer = styled.section`
     .bloc-input-item {
       position: relative;
       width: 100%;
-      margin: 0 1rem 0rem 0;
       flex: 1;
 
       @media screen and (max-width: 1080px) {
-        margin: 0 0 38px 0;
+        margin: 0 0 24px 0;
       }
 
       .search {
@@ -52,12 +55,17 @@ export const UrlShortContainer = styled.section`
       }
 
       .error-message {
-        position: absolute;
-        left: 0;
-        bottom: -24px;
+        display: block;
+        margin-top: 8px;
         font-weight: 500;
         font-style: italic;
         color: #f46363;
+      }
+    }
+
+    .btn--submit {
+      @media screen and (max-width: 1080px) {
+        margin: 0 0 16px 0;
       }
     }
 
@@ -101,16 +109,18 @@ export const UrlShortContainer = styled.section`
 
   .reset_local {
     position: absolute;
-    right: 0;
-    bottom: 0;
     z-index: 1000;
-    ${S.size("100px", "24px")}
+    right: 0;
+    left: 0;
+    bottom: 0;
+    ${S.size("100%", "24px")}
     background-color: transparent;
     font-size: 15px;
     line-height: 18px;
-    cursor: pointer;
+    text-align: right;
     font-style: italic;
     font-weight: 700;
+    cursor: pointer;
     &:hover {
       color: #f46363;
       letter-spacing: 1px;
