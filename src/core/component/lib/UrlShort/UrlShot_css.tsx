@@ -1,23 +1,23 @@
-import { S } from "../../styled/function";
-import styled from "styled-components";
+import { S } from '../../styled/function';
+import styled from 'styled-components';
 
 export const UrlShortContainer = styled.section`
-  ${S.flex("row", "flex-start", "flex-start")};
+  ${S.flex('row', 'flex-start', 'flex-start')};
   position: relative;
-  ${S.responsiveContainer("100%")};
+  ${S.responsiveContainer('100%')};
   padding: 0 var(--spacing-xl--y);
   height: auto;
   top: 0px;
   margin: 0 0 16px 0;
 
   .urlShort_container {
-    ${S.flex("column", "center", "flex-start")};
-    ${S.responsiveContainer("100%")};
+    ${S.flex('column', 'center', 'flex-start')};
+    ${S.responsiveContainer('100%')};
 
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 52px 64px;
+    padding: 52px 64px 36px 64px;
     border-radius: 10px;
     background-color: var(--violet-dark);
     z-index: 500;
@@ -26,8 +26,8 @@ export const UrlShortContainer = styled.section`
       padding: 24px;
     }
     .submit {
-      ${S.flex("row", "space-between", "flex-start")};
-      ${S.responsiveContainer("100%")};
+      ${S.flex('row', 'space-between', 'flex-start')};
+      ${S.responsiveContainer('100%')};
       z-index: 1000;
     }
 
@@ -37,7 +37,7 @@ export const UrlShortContainer = styled.section`
       flex: 1;
 
       @media screen and (max-width: 1080px) {
-        ${S.flex("column", "center", "flex-start")};
+        ${S.flex('column', 'center', 'flex-start')};
       }
     }
 
@@ -61,6 +61,7 @@ export const UrlShortContainer = styled.section`
         font-weight: 500;
         font-style: italic;
         color: #f46363;
+        min-height: 1rem;
       }
     }
 
@@ -114,7 +115,7 @@ export const UrlShortContainer = styled.section`
     right: 0;
     left: 0;
     bottom: 0;
-    ${S.size("100%", "24px")}
+    ${S.size('100%', '24px')}
     background-color: transparent;
     font-size: 15px;
     line-height: 18px;

@@ -1,52 +1,57 @@
-import React, { useState } from "react";
-import Forme from "../../SVG/Forme";
-import LinkGenerateByApi from "../LinkGenerateByApi/LinkGenerateByApi";
-import { UrlShortContainer } from "./UrlShot_css";
-import { useEffect } from "react";
-import { manageStorage } from "./manageStorage";
+import React, { useState } from 'react';
+import Forme from '../../SVG/Forme';
+import LinkGenerateByApi from '../LinkGenerateByApi/LinkGenerateByApi';
+import { UrlShortContainer } from './UrlShot_css';
+import { useEffect } from 'react';
+import { manageStorage } from './manageStorage';
 
 export default function UrlShort() {
-  const [error, setError] = useState<boolean | string>("Please add link");
-  const [isDisabled, setIsDisabled] = useState<string>("");
+  const [error, setError] = useState<boolean | string>(false);
+  const [isDisabled, setIsDisabled] = useState<string>('');
   const [resultApi, setResultApi] = useState<[]>([]);
   const [loading, setLoading] = useState(false);
 
   const inputRef = React.useRef<HTMLInputElement | null>(null);
   function handleChange() {
     const element = inputRef.current;
-    const val = element?.value ? element?.value : "";
+    const val = element?.value ? element?.value : '';
 
     if (val.length === 0) {
-      setIsDisabled("");
-      setError("Please add a link");
+      setIsDisabled('');
+      setError('Please add a link');
       return;
     }
 
     if (isValidUrl(val)) {
-      setIsDisabled("disabled");
+      setIsDisabled('disabled');
       setError(false);
       return;
     }
-    setIsDisabled("");
-    setError("url invalid");
+    setIsDisabled('');
+    setError('url invalid');
   }
 
   function handleClick() {
-    fetchData(inputRef?.current?.value ? inputRef.current.value : "");
+    const element = inputRef.current;
+    const val = element?.value ? element?.value : '';
+
+    val.length
+      ? fetchData(inputRef?.current?.value ? inputRef.current.value : '')
+      : setError('Please add a link');
   }
 
   function isValidUrl(url: string) {
     const regexUrl =
       /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/gm;
 
-    const regex = new RegExp(regexUrl, "gm");
+    const regex = new RegExp(regexUrl, 'gm');
 
     return regex.test(url);
   }
 
   async function fetchData(url: string) {
     setLoading(true);
-    setError("Public API, please wait...");
+    setError('Public API, please wait...');
     try {
       const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
       const data = await res.json();
@@ -70,15 +75,9 @@ export default function UrlShort() {
     }
   }
 
-  function resetData() {
-    localStorage.removeItem("url_short");
-    setResultApi([]);
-    resetInput();
-  }
-
   function loadStorage() {
-    const oldItems = JSON.parse(localStorage.getItem("url_short") || "[]")
-      ? JSON.parse(localStorage.getItem("url_short") || "[]")
+    const oldItems = JSON.parse(localStorage.getItem('url_short') || '[]')
+      ? JSON.parse(localStorage.getItem('url_short') || '[]')
       : [];
 
     oldItems.length !== 0 && setResultApi(oldItems);
@@ -86,7 +85,7 @@ export default function UrlShort() {
 
   function resetInput() {
     if (inputRef.current) {
-      inputRef.current.value = "";
+      inputRef.current.value = '';
     }
   }
 
@@ -96,20 +95,20 @@ export default function UrlShort() {
 
   return (
     <>
-      <UrlShortContainer id="__url_short">
-        <div className="urlShort_container">
-          <div className="submit">
-            <div className="bloc_input">
-              <div className="bloc-input-item">
+      <UrlShortContainer id='__url_short'>
+        <div className='urlShort_container'>
+          <div className='submit'>
+            <div className='bloc_input'>
+              <div className='bloc-input-item'>
                 <input
-                  type="text"
-                  placeholder="Shorten a link here..."
-                  className="search"
+                  type='text'
+                  placeholder='Shorten a link here...'
+                  className={`search ${error && 'search_invalid'}`}
                   ref={inputRef}
                   onChange={handleChange}
-                  id="apiInput"
+                  id='apiInput'
                 />
-                <span className="error-message">
+                <span className='error-message'>
                   <p>{error && error}</p>
                 </span>
               </div>
@@ -117,18 +116,17 @@ export default function UrlShort() {
 
             {loading ? (
               <button
-                type="button"
-                className="btn btn--big btn--submit"
+                type='button'
+                className='btn btn--big btn--submit'
                 disabled
               >
                 loading...
               </button>
             ) : (
               <button
-                type="button"
-                className="btn btn--big btn--submit"
+                type='button'
+                className='btn btn--big btn--submit'
                 onClick={handleClick}
-                disabled={!isDisabled}
               >
                 Shorten it!
               </button>
@@ -136,24 +134,15 @@ export default function UrlShort() {
           </div>
 
           <Forme
-            className="forme bottomLeft"
-            width="715px"
-            height="409px"
+            className='forme bottomLeft'
+            width='715px'
+            height='409px'
           ></Forme>
           <Forme
-            className="forme topRight"
-            width="715px"
-            height="409px"
+            className='forme topRight'
+            width='715px'
+            height='409px'
           ></Forme>
-          <button
-            type="button"
-            onClick={() => {
-              resetData();
-            }}
-            className="btn reset_local"
-          >
-            Reset all
-          </button>
         </div>
       </UrlShortContainer>
 
